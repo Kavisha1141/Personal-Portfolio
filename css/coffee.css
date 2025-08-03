@@ -190,6 +190,32 @@ nav a:hover span:first-child {
   color: var(--highlight);
 }
 
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #4e342e;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--bg-color);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 /* CONTAINER */
 .container {
   max-width: 1000px;
