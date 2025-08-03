@@ -78,7 +78,7 @@ body {
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
-    background-color: var(--bg-color);
+    background-color: var(--accent-color);
   }
 
   .nav-links.show {
