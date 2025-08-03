@@ -127,15 +127,17 @@ h2 {
 /* ABOUT SECTION */
 .about-me {
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 1fr 1px;
   gap: 2rem;
   align-items: center;
   margin-bottom: 4rem;
+
 }
 
 .about-info {
   font-size: 1.2rem;
   text-align: justify;
+  margin-top: 1.5rem;
 }
 
 .about-photo img {
