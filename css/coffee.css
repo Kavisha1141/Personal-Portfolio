@@ -1,0 +1,465 @@
+/* COFFEE THEME */
+:root {
+  --bg-color: #401b0f ;         /* Warm mid-tone coffee brown */
+  --text-color: #e1b8a6;         /* Soft neutral off-white */
+  --accent-color: #8E5441;       /* Gentle caramel brown */
+  --secondary-color: #f1c8aa;    /* Chocolate brown */
+  --highlight: #E9E7E4;          /* Muted warm tan */
+  --font-main: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main), serif;
+  line-height: 1.6;
+}
+
+.coffee-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.coffee-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.coffee-quote p {
+  font-size: 1.4rem;
+  color: #ecc8a9;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Ensure the parent link can position its children */
+nav a {
+  position: relative; /* Allows absolute positioning of children */
+  overflow: hidden;   /* Hides steam that goes beyond link bounds initially */
+  display: inline-flex; /* Helps align text and steam placeholder */
+  align-items: center; /* Vertically centers text and steam placeholder */
+  justify-content: center; /* Horizontally centers text and steam placeholder */
+  padding: 0 15px; /* Adjust padding as needed for your design */
+  /* Add any existing styles for your nav links here */
+  text-decoration: none; /* Remove default underline if present */
+  color: inherit; /* Inherit color from parent, or set a default */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Style the text span to ensure it's above the steam if needed */
+nav a span:first-child {
+  position: relative;
+  z-index: 2; /* Ensures text is above steam */
+}
+
+
+/* Style for the steam effect container */
+.steam-effect {
+  position: absolute; /* Position relative to its parent 'a' */
+  bottom: -10px; /* Start below the link */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: 0; /* Initially no width */
+  height: 0; /* Initially no height */
+  overflow: visible; /* Allow pseudo-elements to extend */
+  pointer-events: none; /* Make it unclickable */
+  z-index: 1; /* Place below text */
+  /* We won't transition width/height directly here, but pseudo-elements */
+}
+
+/* Keyframe animation for the steam rising */
+@keyframes steamRise {
+  0% {
+    transform: translate(-50%, 0) scale(0.2); /* Start small and centered at bottom */
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8; /* Full opacity in the middle */
+  }
+  100% {
+    transform: translate(-50%, -100px) scale(1); /* Rise and expand */
+    opacity: 0; /* Fade out at the top */
+  }
+}
+
+/* When the nav link is hovered */
+nav a:hover .steam-effect {
+  width: 60px; /* Give it a small base width for the steam */
+  height: 50px; /* Give it a small base height */
+  animation: steamRise 1.5s forwards ease-out; /* Apply animation */
+}
+
+/* Create the individual steam "puffs" using pseudo-elements */
+.steam-effect::before,
+.steam-effect::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white for steam */
+  border-radius: 50%; /* Make it round */
+  filter: blur(5px); /* Soften the edges for a smoky effect */
+  opacity: 0; /* Start invisible */
+}
+
+.steam-effect::before {
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 0;
+  animation: steamPuff 1.5s infinite ease-out 0.2s; /* Delay for subtle staggered effect */
+}
+
+.steam-effect::after {
+  width: 20px;
+  height: 20px;
+  top: 30%;
+  right: 0;
+  animation: steamPuff 1.5s infinite ease-out 0.5s; /* Longer delay */
+}
+
+@keyframes steamPuff {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7; /* Appear */
+  }
+  100% {
+    transform: translateY(-50px) scale(1.2); /* Rise and grow */
+    opacity: 0; /* Fade out */
+  }
+}
+
+/* Optional: Make the text slightly lighter on hover */
+nav a:hover span:first-child {
+  color: #F8F4E3; /* A nice cream/off-white color */
+}
+
+
+/* Navigation Bar */
+.navbar {
+  background-color: var(--accent-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  font-family: 'Outfit', sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--highlight);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* SECTION HEADINGS */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+/* ABOUT SECTION */
+/* Parent container for About Me and Daily Brew */
+.about-me {
+  display: flex; /* Enables Flexbox for its children */
+  flex-wrap: wrap; /* Allows columns to wrap to next line on smaller screens */
+  justify-content: center; /* Centers the content blocks */
+  align-items: flex-start; /* Aligns items to the top if they have different heights */
+  gap: 80px; /* Space between the two columns (adjust as needed) */
+  max-width: 1000px; /* Limit overall width for readability on very large screens */
+  margin: 40px auto; /* Center the entire section horizontally with vertical spacing */
+  padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
+/* Styling for the About Me text column */
+.about-text {
+  flex: 2; /* Takes up proportionally more space (e.g., 2/3) */
+  min-width: 300px; /* Ensures text doesn't get too squished */
+  max-width: 700px; /* Prevents text line length from becoming too long */
+  padding-right: 20px; /* Add some internal padding */
+  /* Add existing text styling for your H2 and P tags here */
+}
+
+.about-text h2 {
+  margin-top: 0; /* Remove default top margin if needed */
+  color: #F8F4E3; /* Example color, match your design */
+  font-size: 2.2em; /* Example font size */
+}
+
+.about-text .about-info { /* Your paragraph with class about-info */
+  color: rgba(255, 255, 255, 0.85); /* Slightly lighter text for readability */
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+/* Styling for the Daily Brew container (the right column) */
+.daily-brew-container {
+  flex: 1; /* Takes up proportionally less space (e.g., 1/3) */
+  min-width: 280px; /* Minimum width for the daily brew box */
+  max-width: 400px; /* Maximum width for the daily brew box */
+  background-color: #3C2F2F; /* A slightly lighter brown, like a coffee bean shade */
+  border-radius: 12px; /* Rounded corners for a "card" look */
+  padding: 30px; /* Internal padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex; /* Use flex for internal content layout */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute content top to bottom */
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.daily-brew-container h3 {
+  margin-top: 0;
+  color: #F8F4E3; /* Creamy white for heading */
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2); /* Subtle dashed line */
+  padding-bottom: 15px;
+}
+
+.daily-brew-container .update-date {
+  color: rgba(255, 255, 255, 0.6); /* Lighter gray for date */
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.daily-brew-container ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  /* Space before the coffee thought */
+  margin: 0 0 25px;
+}
+
+.daily-brew-container ul li {
+  color: rgba(255, 255, 255, 0.9); /* White/light gray for list items */
+  margin-bottom: 12px;
+  font-size: 1em;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 25px; /* Space for custom bullet */
+}
+
+/* Optional: Custom coffee bean bullet point */
+.daily-brew-container ul li::before {
+  content: '☕'; /* Coffee cup emoji, or use a tiny image/SVG */
+  position: absolute;
+  left: 0;
+  color: #D2B48C; /* A lighter, latte-like brown for the icon */
+  font-size: 0.8em;
+  top: 2px;
+}
+
+.daily-brew-container .coffee-thought {
+  color: rgba(255, 255, 255, 0.7); /* Slightly muted for the thought */
+  font-style: italic;
+  text-align: center;
+  margin-top: auto; /* Pushes it to the bottom if container has extra space */
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2); /* Subtle dashed line */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: center; /* Center items when stacked */
+    gap: 30px; /* Reduce gap when stacked */
+  }
+
+  .about-text,
+  .daily-brew-container {
+    flex: none; /* Remove flex sizing */
+    width: 90%; /* Take up most of the width */
+    max-width: 600px; /* Limit max width even when stacked */
+  }
+}
+
+/* TECH STACK */
+
+/* Styling for the main Tech Stack section header (adjust to your existing styles) */
+.tech-stack h2 { /* Targeting the h2 within your section with class tech-stack */
+  text-align: center; /* Center the main heading */
+  margin-bottom: 40px; /* Space below the heading */
+  color: #F8F4E3; /* Example color */
+  font-size: 2.5em; /* Example font size */
+}
+
+/* Container for all your tech categories (the new grid) */
+.tech-stack { /* Target the section itself, as it's now your grid container */
+  display: grid; /* Turns the container into a grid */
+  /* Creates flexible columns: as many as can fit, each min 200px wide, max 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px; /* Space between the grid items (columns and rows) */
+  max-width: 1000px; /* Adjust this to control overall width of the tech stack grid */
+  margin: 60px auto; /* This centers the entire grid container horizontally */
+  padding: 0 20px; /* Add some horizontal padding for smaller screens */
+}
+
+
+/* Optional: Styling for the individual tech category boxes (.stack-group) */
+.stack-group {
+  background-color: #3C2F2F; /* A slightly lighter brown for the category cards */
+  padding: 25px; /* Internal padding for each card */
+  border-radius: 10px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  text-align: center; /* Center the content within each category box */
+  display: flex; /* Use flexbox for internal content alignment */
+  flex-direction: column; /* Stack h3 and ul vertically */
+  align-items: center; /* Center items horizontally within the column */
+}
+
+.stack-group h3 {
+  margin-top: 0; /* Remove default top margin for h3 */
+  color: #F8F4E3; /* Creamy white for subheadings */
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2); /* Subtle divider */
+  padding-bottom: 10px;
+  width: 80%; /* Limit width of border */
+}
+
+.stack-group ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure ul takes full width of parent flex item */
+}
+
+.stack-group li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter text for list items */
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+/* --- Responsive Adjustments for Tech Stack --- */
+@media (max-width: 768px) {
+  .tech-stack {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Might want larger min-width on mobile */
+    gap: 20px; /* Slightly reduce gap on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack {
+    grid-template-columns: 1fr; /* Stack into a single column on very small screens */
+    padding: 0 15px;
+  }
+}
+
+/* PROJECTS */
+.projects {
+  margin-bottom: 4rem;
+}
+
+.project-item {
+  background-color: #3c2b25;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.project-description {
+  color: var(--text-color);
+}
+
+/* CONTACT FORM */
+.contact {
+  margin-top: 4rem;
+  background-color: var(--accent-color);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.contact h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  background-color: var(--highlight);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-main), serif;
+}
+
+button {
+  background-color: var(--highlight);
+  color: var(--text-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8c5d3e;
+}
