@@ -202,6 +202,14 @@ h2 {
   align-items: center;
 }
 
+.project-image {
+  width: 100%;       /* makes image fill container width */
+  max-width: 300px;  /* max width to prevent it from getting too big */
+  height: auto;      /* keeps aspect ratio */
+  border-radius: 10px;  /* optional: rounded corners */
+  object-fit: cover; /* if cropping needed */
+}
+
 .project-item img {
   width: 100%;
   border-radius: 0.75rem;

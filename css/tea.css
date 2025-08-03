@@ -248,9 +248,11 @@ main {
   flex-wrap: wrap;
 }
 
-.projects img {
-  width: 180px;
-  height: 130px;
+
+
+.projects-image {
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -294,13 +296,14 @@ main {
   font-size: 2rem;
   color: #A9746E;
   margin-bottom: 1rem;
+  margin-top: 5rem;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .contact input,
