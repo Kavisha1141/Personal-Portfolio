@@ -190,12 +190,11 @@ nav a:hover span:first-child {
   color: var(--highlight);
 }
 
-
 .menu-toggle {
   display: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #4e342e;
+  color: #4e593b;
 }
 
 @media (max-width: 768px) {
@@ -213,8 +212,12 @@ nav a:hover span:first-child {
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #4e342e;
   }
 }
+
 
 /* CONTAINER */
 .container {

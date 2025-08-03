@@ -87,8 +87,12 @@ body {
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #4e342e;
   }
 }
+
 
 .photo-gallery {
   display: flex;
