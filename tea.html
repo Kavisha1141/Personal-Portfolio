@@ -45,9 +45,9 @@
 
       <div class="about-text">
         <h2>About Me</h2>
-        <div class="about-info">I'm a South Asian CS student who loves mixing thoughtful design with tech. I enjoy solving real-world problems with code — one sip of chai at a time.</div>
+        <div class="about-info">I’m a second-year Computer Science student at the University of British Columbia who finds inspiration in the simple joys of life — like a steaming cup of chai paired with crunchy Parle-G biscuits. Rooted in my Indian heritage, I believe in blending tradition with thoughtful design and technology to create meaningful, user-friendly experiences. Passionate about solving real-world problems, I enjoy crafting projects that are both elegant and practical, one thoughtful sip at a time.</div>
       </div>
-      <div class="about-photo">
+          <div class="about-photo">
         <img src="img/kavisha-photo.jpeg" alt="Kavisha's Photo">
       </div>
     </section>
@@ -131,10 +131,16 @@
     <!-- Contact Section -->
     <section id= "contact" class="contact" data-aos="fade-up" data-aos-easing="ease-in-out">
       <h2>Contact Me</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+      <form action="https://formspree.io/f/xwpqnner" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="_replyto" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+
         <button type="submit">Send</button>
       </form>
     </section>

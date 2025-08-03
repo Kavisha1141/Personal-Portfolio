@@ -250,12 +250,12 @@ main {
 
 
 
-.projects-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.project-image {
+  width: 100%;       /* makes image fill container width */
+  max-width: 300px;  /* max width to prevent it from getting too big */
+  height: auto;      /* keeps aspect ratio */
+  border-radius: 10px;  /* optional: rounded corners */
+  object-fit: scale-down; /* if cropping needed */
 }
 
 .project-info {

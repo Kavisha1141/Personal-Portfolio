@@ -152,10 +152,16 @@
   <!-- Contact Section -->
   <section id= "contact" class="contact" data-aos="fade-in"  data-aos-easing="ease-in-out">
     <h2>Contact Me</h2>
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+    <form action="https://formspree.io/f/xwpqnner" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="_replyto" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" required></textarea>
+
       <button type="submit">Send</button>
     </form>
   </section>
