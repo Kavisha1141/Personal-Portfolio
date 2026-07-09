@@ -1,5 +1,5 @@
 /* ============================================
-   Kavisha's Portfolio â€” Warm Modern Styles
+    Kavisha's Portfolio — Warm Modern Styles 
    ============================================ */
 
 :root {
@@ -98,7 +98,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(213, 192, 160, 0.88);
+  background: rgba(250, 247, 242, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -175,7 +175,12 @@ header {
 }
 
 header h1 {
-  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 60%, var(--amber) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--accent-dark) 45%,
+    var(--accent) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -267,7 +272,7 @@ header h1 {
 }
 
 .stack-group li::before {
-  content: 'â€”';
+  content: '—';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -326,10 +331,21 @@ header h1 {
   flex-shrink: 0;
 }
 
-.icon-circle.purple { background: var(--purple-light); }
-.icon-circle.amber { background: var(--amber-light); }
-.icon-circle.green { background: var(--sage-light); }
-.icon-circle.blue { background: var(--blue-light); }
+.icon-circle.chai {
+  background: var(--accent-light);
+}
+
+.icon-circle.espresso {
+  background: #E7D8CE;
+}
+
+.icon-circle.green {
+  background: var(--sage-light);
+}
+
+.icon-circle.cream {
+  background: var(--cream);
+}
 
 .project-name {
   font-family: 'Martel', serif;
@@ -358,14 +374,14 @@ header h1 {
   color: var(--sage-dark);
 }
 
-.badge.amber {
-  background: var(--amber-light);
-  color: #7a5c20;
+.badge.chai {
+  background: var(--accent-light);
+  color: var(--accent-dark);
 }
 
-.badge.blue {
-  background: var(--blue-light);
-  color: #3d5f75;
+.badge.cream {
+  background: var(--cream);
+  color: var(--primary);
 }
 
 .pull-quote {
@@ -446,9 +462,17 @@ header h1 {
 }
 
 /* Card accent borders */
-.card.amber-accent { border-top: 3px solid var(--amber); }
-.card.green-accent { border-top: 3px solid var(--sage); }
-.card.blue-accent { border-top: 3px solid var(--blue-soft); }
+.card.chai-accent {
+  border-top: 3px solid var(--accent);
+}
+
+.card.green-accent {
+  border-top: 3px solid var(--sage);
+}
+
+.card.espresso-accent {
+  border-top: 3px solid var(--primary);
+}
 
 /* ========== Experience ========== */
 .experience {
@@ -559,7 +583,7 @@ header h1 {
 
 .contact button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(184, 115, 92, 0.3);
+  box-shadow: 0 8px 24px rgba(201, 123, 99, 0.3);
 }
 
 /* ========== Animations ========== */
@@ -613,7 +637,7 @@ header h1 {
     top: 64px;
     left: 0;
     right: 0;
-    background: rgba(247, 243, 237, 0.97);
+    background: rgba(250, 247, 242, 0.97);
     backdrop-filter: blur(12px);
     flex-direction: column;
     padding: 1.5rem;
