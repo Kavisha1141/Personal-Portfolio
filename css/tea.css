@@ -461,6 +461,7 @@ main {
 
 
 /* Projects */
+/*
 .projects h2 {
   font-size: 2rem;
   color: #A9746E;
@@ -475,14 +476,10 @@ main {
 }
 
 
+*/
 
-.project-image {
-  width: 100%;       /* makes image fill container width */
-  max-width: 300px;  /* max width to prevent it from getting too big */
-  height: auto;      /* keeps aspect ratio */
-  border-radius: 10px;  /* optional: rounded corners */
-  object-fit: scale-down; /* if cropping needed */
-}
+/*
+
 
 .project-info {
   max-width: 600px;
