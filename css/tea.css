@@ -3,28 +3,41 @@
    ============================================ */
 
 :root {
-  --bg: #f7f3ed;
-  --bg-elevated: #fffdf9;
-  --text: #2d2420;
-  --text-muted: #8a7a6e;
-  --accent: #b8735c;
-  --accent-light: #e8cfc4;
-  --accent-dark: #8a5340;
-  --sage: #7d9b76;
-  --sage-light: #d4e0d1;
-  --sage-dark: #5a7a55;
-  --amber: #c9a84c;
-  --amber-light: #f0e4c4;
-  --blue-soft: #6b8fa8;
-  --blue-light: #c8dae6;
-  --purple-soft: #9b8db8;
-  --purple-light: #ddd6e8;
-  --border: #e8ddd3;
-  --shadow: rgba(45, 36, 32, 0.08);
+  /* Core palette */
+  --bg: #FAF7F2;              /* warm ivory */
+  --bg-elevated: #FFFFFF;     /* clean card surface */
+  
+  --text: #1F2937;            /* deep charcoal */
+  --text-muted: #6B7280;      /* soft grey */
+
+  /* Chai / coffee accents */
+  --accent: #C97B63;          /* terracotta chai */
+  --accent-light: #E8CFC4;    /* soft chai cream */
+  --accent-dark: #8B5E4B;     /* roasted chai */
+
+  /* Espresso / buttons */
+  --primary: #5C4033;         /* deep brown */
+  --primary-light: #8B6F5A;
+
+  /* Sage balance */
+  --sage: #8FA98B;            /* muted sage */
+  --sage-light: #D9E4D6;
+  --sage-dark: #607A5C;
+
+  /* Warm neutrals */
+  --cream: #F3E9DC;
+  --sand: #E6D5C3;
+
+  /* UI */
+  --border: #E5D8CC;
+  --shadow: rgba(31, 41, 55, 0.08);
+
+  /* Shape */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
+
   --transition: 0.3s ease;
 }
 
