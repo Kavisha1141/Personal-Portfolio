@@ -1,18 +1,37 @@
 
-/* new */
+:root{
+  --bg: #F8F5F1;
+  --surface: #FFFCF8;
+
+  --text: #2F2925;
+  --text-light: #6E625A;
+
+  --accent: #8B6B5C;
+  --accent-dark: #6D5247;
+
+  --border: #E8DDD3;
+  --highlight: #EADBC8;
+
+  --sage: #7B8A68;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Outfit',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
 /* ── Base ── */
     * { box-sizing: border-box; margin: 0; padding: 0; }
  
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: #F7E7CE;
-      color: #4e3929;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      box-sizing: border-box;
-    }
- 
+    
     .projects-section {
       max-width: 780px;
       margin: 0 auto;
@@ -28,19 +47,20 @@
     }
  
     /* ── Card ── */
-    .card {
-      background: #fff;
-      border-radius: 0 16px 16px 0;
-      border: 1px solid #e8e4df;
-      border-left: 3px solid #6C63FF;
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-      transition: box-shadow 0.2s ease;
-    }
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-left:4px solid var(--accent);
+      border-radius:16px;
+      padding:1.75rem;
+      margin-bottom:1.5rem;
+      transition:.25s ease;
+  }
  
-    .card:hover {
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 30px rgba(47,41,37,.12);
+  }
  
     /* ── Card header ── */
     .card-header {
@@ -68,10 +88,21 @@
       flex-shrink: 0;
     }
  
-    .icon-circle.purple { background: #eeecff; }
-    .icon-circle.amber  { background: #fff4e0; }
-    .icon-circle.green  { background: #e8f5ee; }
-    .icon-circle.blue   { background: #e6f0ff; }
+    .icon-circle.chai{
+        background:#EFE5DB;
+    }
+
+    .icon-circle.sage{
+        background:#E6ECDD;
+    }
+
+    .icon-circle.caramel{
+        background:#F3E3CF;
+    }
+
+    .icon-circle.mocha{
+        background:#E8DAD2;
+    }
  
     .project-name {
       font-size: 16px;
@@ -86,13 +117,14 @@
       margin-top: 2px;
     }
  
-    .badge {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      white-space: nowrap;
-      flex-shrink: 0;
+    .badge.completed{
+        background:#E8EFE4;
+        color:#58714A;
+    }
+
+    .badge.in-progress{
+        background:#EFE5DB;
+        color:#8B6B5C;
     }
  
     .badge.green  { background: #e8f5ee; color: #2d7a4f; }
@@ -127,11 +159,8 @@
       min-width: 0;
     }
  
-    .stat-num {
-      font-size: 20px;
-      font-weight: 700;
-      color: #6C63FF;
-      line-height: 1.2;
+    .stat-num{
+      color:var(--accent);
     }
  
     .stat-label {
@@ -227,7 +256,7 @@ main {
 
 /* Navigation Bar */
 .navbar {
-  background-color: #A9746E;
+  background:var(--accent);
   padding: 1rem 0;
   position: sticky;
   top: 0;
