@@ -1,16 +1,16 @@
 
 :root{
-  --bg: #F8F5F1;
-  --surface: #FFFCF8;
+  --bg: #FAF7F2;
+  --surface: #FFFDF9;
 
-  --text: #2F2925;
-  --text-light: #6E625A;
+  --text: #2E2A26;
+  --text-light: #6F675F;
 
-  --accent: #8B6B5C;
-  --accent-dark: #6D5247;
+  --accent: #C9784A;
+  --accent-dark: #A85D34;
 
-  --border: #E8DDD3;
-  --highlight: #EADBC8;
+  --border: #E9DED2;
+  --highlight: #F4EEE6;
 
   --sage: #7B8A68;
 }
@@ -28,7 +28,7 @@ body{
     line-height:1.6;
 }
 
-/* ── Base ── */
+/* â”€â”€ Base â”€â”€ */
     * { box-sizing: border-box; margin: 0; padding: 0; }
  
     
@@ -46,7 +46,7 @@ body{
       margin-bottom: 2rem;
     }
  
-    /* ── Card ── */
+    /* â”€â”€ Card â”€â”€ */
     .card{
       background:var(--surface);
       border:1px solid var(--border);
@@ -62,7 +62,7 @@ body{
       box-shadow:0 12px 30px rgba(47,41,37,.12);
   }
  
-    /* ── Card header ── */
+    /* â”€â”€ Card header â”€â”€ */
     .card-header {
       display: flex;
       align-items: flex-start;
@@ -124,7 +124,7 @@ body{
 
     .badge.in-progress{
         background:#EFE5DB;
-        color:#8B6B5C;
+        color:#C9784A;
     }
  
     .badge.green  { background: #e8f5ee; color: #2d7a4f; }
@@ -132,7 +132,7 @@ body{
     .badge.blue   { background: #e6f0ff; color: #1a5cbf; }
     .badge.purple { background: #eeecff; color: #5046b5; }
  
-    /* ── Pull quote ── */
+    /* â”€â”€ Pull quote â”€â”€ */
     .pull-quote {
       font-family: Georgia, 'Times New Roman', serif;
       font-style: italic;
@@ -144,7 +144,7 @@ body{
       margin-bottom: 0;
     }
  
-    /* ── Stats row ── */
+    /* â”€â”€ Stats row â”€â”€ */
     .stat-row {
       display: flex;
       gap: 10px;
@@ -170,14 +170,14 @@ body{
       line-height: 1.3;
     }
  
-    /* ── Divider ── */
+    /* â”€â”€ Divider â”€â”€ */
     .divider {
       border: none;
       border-top: 1px solid #f0ece8;
       margin: 1rem 0;
     }
  
-    /* ── Field rows ── */
+    /* â”€â”€ Field rows â”€â”€ */
     .field { margin-bottom: 12px; }
  
     .field:last-child { margin-bottom: 0; }
@@ -197,7 +197,7 @@ body{
       line-height: 1.65;
     }
  
-    /* ── Tech tags ── */
+    /* â”€â”€ Tech tags â”€â”€ */
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
  
     .tag {
@@ -209,7 +209,7 @@ body{
       color: #5046b5;
     }
  
-    /* ── Accent colors per card ── */
+    /* â”€â”€ Accent colors per card â”€â”€ */
     .card.amber-accent  { border-left-color: #f0a500; }
     .card.amber-accent .stat-num { color: #c47e00; }
     .card.amber-accent .tag { background: #fff4e0; color: #9a6c00; }
@@ -222,7 +222,7 @@ body{
     .card.blue-accent .stat-num { color: #1a5cbf; }
     .card.blue-accent .tag { background: #e6f0ff; color: #1a5cbf; }
  
-    /* ── Responsive ── */
+    /* â”€â”€ Responsive â”€â”€ */
     @media (max-width: 520px) {
       .stat-row { flex-wrap: wrap; }
       .stat { flex: 1 1 calc(50% - 5px); }
@@ -231,7 +231,7 @@ body{
 /* new */
 /* Header */
 header {
-  background-color: #A9746E; /* muted brown-chai tone */
+  background:linear-gradient(135deg,#D88958,#C9784A); /* muted brown-chai tone */
   color: #F7E7CE;
   text-align: center;
   padding: 2.5rem 1rem;
@@ -338,7 +338,7 @@ main {
 }
 
 .about-text h2 {
-  color:#A9746E;
+  color:var(--text);
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: 'Outfit', sans-serif;
@@ -375,7 +375,7 @@ main {
 /*!* Tech Stack *!*/
 /*.tech-stack h2 {*/
 /*  font-size: 2rem;*/
-/*  color:#A9746E;*/
+/*  color:var(--text);*/
 /*  margin-bottom: 1rem;*/
 /*}*/
 
@@ -415,7 +415,7 @@ main {
 #stack-title { /* Targeting the h2 within your section with class tech-stack */
   text-align: left; /* Center the main heading */
   margin-bottom: 40px; /* Space below the heading */
-  color: #A9746E; /* Example color */
+  color:var(--text); /* Example color */
   font-size: 2.5em; /* Example font size */
 }
 
@@ -433,7 +433,7 @@ main {
 
 /* Optional: Styling for the individual tech category boxes (.stack-group) */
 .stack-group {
-  background-color: #dda76f; /* A slightly lighter brown for the category cards */
+  background:var(--surface); /* A slightly lighter brown for the category cards */
   padding: 25px; /* Internal padding for each card */
   border-radius: 10px; /* Rounded corners for the cards */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
@@ -489,7 +489,7 @@ main {
 /*
 .projects h2 {
   font-size: 2rem;
-  color: #A9746E;
+  color:var(--text);
   margin-bottom: 1.5rem;
 }
 
@@ -524,7 +524,7 @@ main {
 /* Experience */
 .experience h2 {
   font-size: 2rem;
-  color: #A9746E;
+  color:var(--text);
   margin-bottom: 1rem;
 }
 
@@ -542,7 +542,7 @@ main {
 /* Contact */
 .contact h2 {
   font-size: 2rem;
-  color: #A9746E;
+  color:var(--text);
   margin-bottom: 1rem;
   margin-top: 5rem;
 }
@@ -565,7 +565,7 @@ main {
 }
 
 .contact button {
-  background-color: #bfae9b;
+  background:var(--accent);
   color: #fff;
   border: none;
   padding: 0.8rem;
@@ -575,5 +575,35 @@ main {
 }
 
 .contact button:hover {
-  background-color: #a8947d;
+  background:var(--accent-dark);
+}
+
+
+/* Modern chai overrides */
+.stack-group{
+ border:1px solid var(--border);
+ box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.stack-group h3{color:var(--accent);}
+.stack-group li{color:var(--text-light);}
+.navbar{
+ background:var(--surface);
+ border-bottom:1px solid var(--border);
+ box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+.nav-logo,.nav-links a{color:var(--text);}
+.nav-links a:hover{color:var(--accent);}
+.contact input,.contact textarea{
+ background:var(--surface);
+ border:1px solid var(--border);
+ color:var(--text);
+}
+.contact input:focus,.contact textarea:focus{
+ outline:none;
+ border-color:var(--accent);
+ box-shadow:0 0 0 4px rgba(201,120,74,.15);
+}
+.tag{
+ background:#F4EEE6;
+ color:var(--accent);
 }
