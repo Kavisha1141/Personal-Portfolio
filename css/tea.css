@@ -203,6 +203,56 @@ header h1 {
   animation: fadeInUp 0.8s ease both;
 }
 
+.hero {
+  text-align: center;
+  padding: 6rem 1.5rem 5rem;
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  margin: 1.5rem auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero-links a {
+  color: var(--text-muted);
+}
+
 /* ========== Container ========== */
 .container {
   max-width: 900px;
@@ -474,6 +524,25 @@ header h1 {
   background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text-muted);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  background: var(--accent-light);
 }
 
 /* Card accent borders */
